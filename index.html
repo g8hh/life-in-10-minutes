@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="JS/Internal/jquery-3.6.0.min.js"></script>
+    <script src="JS/Internal/notify.js"></script>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Life In 10 Minutes</title>
+</head>
+<body>
+    <script src="chs.js"></script>
+    <script src="core.js"></script>
+    <div id="promptContainer" class="modalContainer">
+        <div id="prompt">
+            <h3 id="promptTitle"></h3>
+            <input id="promptInput" type="text" placeholder="Enter text">
+            <button id="promptButton" style="border: 2px solid;">Submit</button>
+        </div>
+    </div>
+    <div class="flexCol" style="margin-top:2vh">
+        <div id="progressBar">10 Minutes Remaining</div>
+        <div id="mainStatsHolder" class="flexRow">
+            <p id="moneyText">Money: $0.00</p>
+            <p id="healthText">Health: 100/100</p>
+            <p id="energyText">Energy: 100/100</p>
+            <p id="experienceText">Experience: Level 0 (0/10)</p>
+        </div>
+    </div>
+    <div id="tabButtonHolder" class="flexRow" style="margin-top:2vh">
+        <button id="mainTabButton">Main Area</button>
+        <button id="settingsTabButton">Settings</button>
+    </div>
+    <div id="mainTabHolder" class="flexCol" style="margin-top:1vh">
+        <div id="tabButtonHolder" class="flexRow" style="margin-top:.5vh">
+            <button id="mainSubTabButton0">Jobs</button>
+            <button id="mainSubTabButton1">Energy</button>
+            <button id="mainSubTabButton2">Health</button>
+        </div>
+        <div id="mainSubTabHolder0" class="flexCol" style="margin-top:.5vh">
+            <h4>Jobs</h4>
+            <button id="job0"></button>
+            <button id="job1"></button>
+            <button id="job2"></button>
+            <button id="job3"></button>
+            <button id="job4"></button>
+            <button id="job5"></button>
+            <button id="job6"></button>
+        </div>
+        <div id="mainSubTabHolder1" class="flexCol" style="margin-top:.5vh">
+            <h4>Energy</h4>
+            <button id="energy0"></button>
+            <button id="energy1"></button>
+            <button id="energy2"></button>
+            <button id="energy3"></button>
+        </div>
+        <div id="mainSubTabHolder2" class="flexCol" style="margin-top:.5vh">
+            <h4>Health</h4>
+            <button id="health0"></button>
+            <button id="health1"></button>
+            <button id="health2"></button>
+            <button id="health3"></button>
+        </div>
+    </div>
+    <div id="settingsTabHolder" class="flexCol" style="margin-top:1vh">
+        <h3>Settings</h3>
+        <div id="settingsButtonHolder" class="flexRow">
+            <button onclick="save()">Save</button>
+            <button onclick="createPrompt('Import Save',0)">Import</button>
+            <button onclick="exportSave()">Export</button>
+            <button onclick="fullReset()">Reset (Exports)</button>
+        </div>
+        <p>Life in 10 Minutes (A really bad Incremental Game)</p>
+        <p>Made using: notify.js, jquery and break_eternity.js</p>
+        <p>Created by VoidCloud for the Void Development 2.0 Jam</p>
+    </div>
+    <div id="startDialogHolder" class="flexCol" style="margin-top:1vh">
+        <h3>Welcome!</h3>
+        <p>This is Life in 10 Minutes a really bad clicker I made for my own jam if you enjoyed it you may not be mentally stable press the button to begin the timer.</p>
+        <button class="unlocked" onclick="data.gameStarted = true">Start My Suffering!</button>
+    </div>
+    <div id="endDialogHolder" class=flexCol style="margin-top:1vh;">
+        <h3>The End...</h3>
+        <p id="endingText" style="max-width:50em"></p>
+        <button class="unlocked" onclick="fullReset()">Start Again.</button>
+    </div>
+</body>
+    <script src="JS/Internal/BreakEternity.js"></script>
+    <script src="JS/Internal/Cache.js"></script>
+    <script src="JS/Internal/Formatting.js"></script>
+    <script src="JS/Internal/MyMath.js"></script>
+    <script src="JS/data.js"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/update.js"></script>
+    <script src="JS/jobs.js"></script>
+    <script src="JS/xp.js"></script>
+    <script src="JS/energy.js"></script>
+    <script src="JS/health.js"></script>
+<!--客服 开始-->
+<script src="//g8hh.github.io/static/js/jquery.min.js"></script>
+<link rel="stylesheet" href="//g8hh.github.io/static/css/kf.css" type="text/css" media="screen" charset="utf-8">
+<script src="//g8hh.github.io/static/js/kf.js"></script>
+<!-- 客服 结束 -->
+<!--站长统计-->
+   <div style="display: none"><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?f237591d5976f87ca2e06b38c3658d9c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    </div>
+</html>
